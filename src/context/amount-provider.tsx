@@ -10,7 +10,7 @@ type AmountProviderProps = {
 type AmountProviderState = {
   amount: number;
   price: number;
-  setAmount: (action: Actions, count: number, price: number) => void;
+  setAmount: (count: number) => void;
   setPrice:(price:number) => void;
 };
 
@@ -33,14 +33,8 @@ export function AmountProvider({
 
   const value = {
     amount,
-    setAmount: (action: Actions, count: number, price: number) => {
-      let result = 0;
-      if (action === "buy") {
-        result = count * price;
-      } else {
-        result = count * price;
-      }
-      setAmount(result);
+    setAmount: (count: number) => {
+      setAmount(count);
     },
     price,
     setPrice: (price: number) => {
