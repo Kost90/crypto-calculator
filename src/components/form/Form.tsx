@@ -28,7 +28,7 @@ export function Form({ setAmount }: { setAmount: (count: number) => void }) {
 
   return (
     <form
-      className="flex flex-col gap-2 p-10 border-2 rounded-md lg:w-96"
+      className="flex flex-col gap-2 p-10 border-2 rounded-md w-full"
       onSubmit={handelSubmit}
     >
       <Label>ETH Amount:</Label>
@@ -57,7 +57,7 @@ function FormWrapper() {
   const { setAmount } = useAmount();
 
   return (
-    <div className="flex flex-col items-center justify-center lg:max-w-96">
+    <div className="flex flex-col items-center justify-center w-full md:max-w-96">
       <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
         ETH calculator:
       </h2>

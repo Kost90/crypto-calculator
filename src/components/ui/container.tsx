@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { useAmount } from "@/context/amount-provider";
 import useSocket from "@/hooks/socket/Socket";
 import { calcFunc } from "@/lib/utils";
@@ -16,9 +16,9 @@ function Container() {
   }, [amount]);
 
   return (
-    <div className="lg:max-w-96 lg:w-96 w-full p-10 border-2 rounded-md">
+    <div className="md:max-w-96 w-full p-10 border-2 rounded-md">
       <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        You will receive:
+        You will receive USDT:
       </h2>
       <p className="leading-7 [&:not(:first-child)]:mt-6 text-green-500">
         {result}
